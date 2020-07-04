@@ -1,6 +1,8 @@
 import React from 'react'
 import { ThemeProvider, CSSReset, theme, Box, Text } from '@chakra-ui/core'
-
+import { Container } from '../../components/cometainer'
+import { DarkModeSwitch } from '../../components/Swich'
+import { DarkModeButton } from '../../components/Button'
 const Leftk = function () {
   return (
     <>
@@ -126,37 +128,39 @@ breakpoints.md = breakpoints[1]
 breakpoints.lg = breakpoints[2]
 breakpoints.xl = breakpoints[3]
 
-const App = () => (
-  <ThemeProvider>
-    <CSSReset />
-    <Box>
-      <Box width={['100%', '600px', '800px', '1000px']} border={{ sm: 'none', md: '1px solid #7d7d7d' }} h margin='0 auto' mt='20px' padding='20px'>
-        <Box padding='20px' backgroundColor='yellow ' opacity='0.4' color='black'>
-          <Text display='flex' justifyContent='center' fontSize='24px' b>
-            个人简历
-          </Text>
-        </Box>
-
-        <Box height='auto' display={{ sm: 'block', md: 'flex' }} justifyContent='space-between ' mt='20px'>
-          <Box
-            width={{ sm: '100%', md: '30%' }}
-            h
-            display='flex'
-            flexDirection='column'
-            justifyContent='flex-start'
-            padding='0 5px 5px 5px'
-          >
-            <Leftk />
+const show = () => (
+  <>
+    <Container>
+      <DarkModeSwitch />
+      <Box>
+        <Box width={['100%', '600px', '800px', '1000px']} border={{ sm: 'none', md: '1px solid #7d7d7d' }} h margin='0 auto' mt='20px' padding='20px'>
+          <Box padding='20px' backgroundColor='yellow ' opacity='0.4' color='black'>
+            <Text display='flex' justifyContent='center' fontSize='24px' b>
+              个人简历
+            </Text>
           </Box>
 
-          <Box width={{ sm: '100%', md: '60%' }}>
-            <Right />
+          <Box height='auto' display={{ sm: 'block', md: 'flex' }} justifyContent='space-between ' mt='20px'>
+            <Box
+              width={{ sm: '100%', md: '30%' }}
+              h
+              display='flex'
+              flexDirection='column'
+              justifyContent='flex-start'
+              padding='0 5px 5px 5px'
+            >
+              <Leftk />
+            </Box>
+            <Box width={{ sm: '100%', md: '60%' }}>
+              <Right />
+            </Box>
           </Box>
         </Box>
-
       </Box>
-    </Box>
-  </ThemeProvider>
+      <DarkModeButton />
+    </Container>
+  </>
+
 )
 
-export default App
+export default show
