@@ -4,7 +4,7 @@ import { Container } from '../../components/cometainer'
 import { DarkModeSwitch } from '../../components/Swich'
 import { DarkModeButton } from '../../components/Button'
 
-const bj = '#FFB5C5'
+const bj = '#00CED1'
 
 const Leftk = function () {
   return (
