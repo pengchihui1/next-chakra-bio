@@ -3,6 +3,9 @@ import { ThemeProvider, CSSReset, theme, Box, Text } from '@chakra-ui/core'
 import { Container } from '../../components/cometainer'
 import { DarkModeSwitch } from '../../components/Swich'
 import { DarkModeButton } from '../../components/Button'
+
+const bj = '#FFB5C5'
+
 const Leftk = function () {
   return (
     <>
@@ -11,7 +14,7 @@ const Leftk = function () {
         display='flex'
         flexDirection='column'
         justifyContent='center'
-        background='#FFEFD5'
+        background={bj}
         padding='5px'
 
       >
@@ -92,7 +95,7 @@ const Right = function () {
     <>
       {/* 学习经历 */}
       <Box>
-        <Box background='#FFEFD5' padding='5px'><Text fontSize='18px'>毕业院校</Text></Box>
+        <Box background={bj} padding='5px'><Text fontSize='18px'>毕业院校</Text></Box>
         <Box display='flex' justifyContent='space-between' margin='5px 0'>
           <Text>2017年-2019年</Text>
           <Text>专科</Text>
@@ -101,7 +104,7 @@ const Right = function () {
       </Box>
       {/* 职业技能 */}
       <Box marginTop='20px'>
-        <Box background='#FFEFD5' padding='5px'><Text fontSize='18px'>职业技能</Text></Box>
+        <Box background={bj} padding='5px'><Text fontSize='18px'>职业技能</Text></Box>
         <Box margin='5px 0'>
           <Box><Text>熟练html css </Text></Box>
           <Box><Text>关注前端前沿技术</Text></Box>
@@ -109,7 +112,7 @@ const Right = function () {
       </Box>
       {/* 工作经历 */}
       <Box marginTop='20px'>
-        <Box background='#FFEFD5' padding='5px'><Text fontSize='18px'>工作经历</Text></Box>
+        <Box background={bj} padding='5px'><Text fontSize='18px'>工作经历</Text></Box>
         <Box margin='5px 0'>
           <Text>描述：</Text>
           <Text>公司：湖南浮云网络科技有限公司</Text>
@@ -160,7 +163,6 @@ const show = () => (
       <DarkModeButton />
     </Container>
   </>
-
 )
 
 export default show
