@@ -59,6 +59,15 @@ const Leftk = function () {
           <Text>18674802502</Text>
         </Box>
       </Box>
+      {/* 民族 */}
+      <Box display='flex' mt='10px'>
+        <Box width='25%'>
+          <Text>民族：</Text>
+        </Box>
+        <Box width='50%'>
+          <Text>汉族</Text>
+        </Box>
+      </Box>
       {/* 初始日期 */}
       <Box display='flex' mt='10px'>
         <Box width='25%'>
@@ -86,28 +95,63 @@ const Leftk = function () {
           <Text>大专</Text>
         </Box>
       </Box>
+      {/* 邮箱 */}
+      <Box display='flex' mt='10px'>
+        <Box width='25%'>
+          <Text>邮箱：</Text>
+        </Box>
+        <Box width='50%'>
+          <Text>2015430746@qq.com</Text>
+        </Box>
+      </Box>
+      {/* 邮编 */}
+      <Box display='flex' mt='10px'>
+        <Box width='25%'>
+          <Text>邮编：</Text>
+        </Box>
+        <Box width='50%'>
+          <Text>337200</Text>
+        </Box>
+      </Box>
+      {/* 政治面貌 */}
+      <Box display='flex' mt='10px'>
+        <Box width='30%'>
+          <Text>政治面貌：</Text>
+        </Box>
+        <Box width='50%'>
+          <Text>团员</Text>
+        </Box>
+      </Box>
     </>
   )
 }
+const skilla = []
+const skill = ['html5 css3 javaScript ajax', 'sass less预编译', 'mongdb node.js  vue element-ui', 'springboot  mybatis hibernate spa mysql tomcat', 'storybook vercel chakra-ui next.js react', 'es6 extjs', '关注前端前沿技术']
 
 const Right = function () {
   return (
     <>
-      {/* 学习经历 */}
+      {/* 教育背景 */}
       <Box>
-        <Box background={bj} padding='5px'><Text fontSize='18px'>毕业院校</Text></Box>
+        <Box background={bj} padding='5px'><Text fontSize='18px'>教育背景</Text></Box>
         <Box display='flex' justifyContent='space-between' margin='5px 0'>
           <Text>2017年-2019年</Text>
+          <Text>长沙新华电脑学院</Text>
           <Text>专科</Text>
-          <Text>经济管理专业</Text>
+          <Text>软件开发</Text>
         </Box>
       </Box>
       {/* 职业技能 */}
       <Box marginTop='20px'>
         <Box background={bj} padding='5px'><Text fontSize='18px'>职业技能</Text></Box>
         <Box margin='5px 0'>
-          <Box><Text>熟练html css </Text></Box>
-          <Box><Text>关注前端前沿技术</Text></Box>
+          {/* 循环skill */}
+
+          {
+            skilla.map((item, index) => {
+              return <Box key={index}><Text letterSpacing='1px' fontSize='md'>{item} </Text></Box>
+            })
+          }
         </Box>
       </Box>
       {/* 工作经历 */}
@@ -160,7 +204,7 @@ const show = () => (
           </Box>
         </Box>
       </Box>
-      <DarkModeButton />
+
     </Container>
   </>
 )
